@@ -19,8 +19,8 @@ export default class Head extends Component{
                         <li>
                             <input type="text" placeholder="输入商户名,地点"/>
                         </li>
-                        <li  class="icon iconfont icon-fangdajing"></li>
-                        <li class="icon iconfont icon-geren"></li>
+                        <li  className="icon iconfont icon-fangdajing"></li>
+                        <li className="icon iconfont icon-geren"></li>
                     </ul>
                 </header>
             </div>

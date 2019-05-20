@@ -1,0 +1,34 @@
+
+
+
+.box{
+    width: 100%;
+    height: 1.2rem;
+    border: 1px solid #e1e1e1;
+    background: url("../../images/down-b.png") repeat-x;
+    position: relative;
+}
+.box>button{
+    position: absolute;
+    font-size: 0.15rem;
+    width: 1.3rem;
+    height: 0.42rem;
+    border-radius: 0.05rem;
+    outline:none;  /*  点击后没有边框*/
+}
+.box>button:nth-child(1){
+    color: #ff6633;
+    border: none;
+    border: 1px solid #ff6633;
+    background: #fff;
+    bottom: 0.09rem;
+    left: 0.5rem;
+
+}
+.box>button:nth-child(2){
+    color: #fff;
+    border: none;
+    background: #ff6633;
+    bottom: 0.09rem;
+    right: 0.5rem;
+}
