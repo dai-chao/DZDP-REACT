@@ -57,15 +57,13 @@ export default class Banner extends Component{
     };
 
     componentDidMount(){
-        console.log(this.state);
+        //console.log(this.state);
     }
     showIndex(index){
         this.setState({
             showindex:index
         })
     }
-
-
     render(){
         return(
             <div>
