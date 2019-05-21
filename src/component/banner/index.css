@@ -6,14 +6,15 @@
     font-size: 0.16rem;
     /*background: #00BCD4;*/
     position: relative;
+    overflow: hidden;
+
 }
-.bannerBox>.banner{
-
-
+.bannerBox .banner{
+    width: 3.75rem;
     height: 100%;
     /*background: #4cae4c;*/
 }
-.bannerBox>.banner>a{
+.bannerBox .banner>a{
     display: block;
     width: 0.71rem;
     height: 0.84rem;
@@ -23,7 +24,7 @@
     color:#333;
 }
 
-.bannerBox>.banner>a>li>i{
+.bannerBox .banner>a>li>i{
     display: inline-block;
     width: 0.42rem;
     height: 0.42rem;
@@ -34,7 +35,7 @@
     border-radius: 50%;
     color: #fff;
 }
-.bannerBox>.banner>a>li>p{
+.bannerBox .banner>a>li>p{
     width: 0.6rem;
     text-align: center;
     margin-left: 0.13rem;
