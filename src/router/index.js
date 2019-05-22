@@ -5,9 +5,7 @@ import App from "../App"
 import Home from "../pages/home/index"
 
 class Rout extends Component{
-    constructor(props){
-        super(props)
-    }
+
     render(){
         return(
             <HashRouter>

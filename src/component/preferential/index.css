@@ -1,0 +1,15 @@
+.prebox{
+    /*box-sizing: border-box;*/
+    width: 100%;
+    height: 2.17rem;
+    background: #f0f0f0;
+    border-bottom: 1px solid #e1e1e0;
+    border-top: 1px solid #e1e1e0;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+.pre{
+    width: 100%;
+    height: 100%;
+    background: #1b6d85;
+}

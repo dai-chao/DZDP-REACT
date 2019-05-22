@@ -1,11 +1,9 @@
 
 
 import  React,{ Component } from "react"
-import { Carousel } from 'antd';
-import BScroll from "better-scroll"
-import Scroll from "react-bscroll"
-import "react-bscroll/lib/react-scroll.css"
+import ReactSwipe from 'react-swipe';
 import "./index.css"
+
 
 
 
@@ -13,6 +11,7 @@ export default class Banner extends Component{
     constructor(props){
         super(props);
         this.state={
+            index:1,
             showindex:0,
             bannerList1:[
                 [
@@ -55,64 +54,79 @@ export default class Banner extends Component{
 
         };
     };
-
     componentDidMount(){
         //console.log(this.state);
+
     }
     showIndex(index){
         this.setState({
             showindex:index
         })
+
     }
     render(){
+        let opt = {
+            auto: 0,
+            callback: function (index) {
+                //console.log(index);
+                this.setState({index: Number(index),showindex:index})
+            }.bind(this)
+        };
+        console.log(opt);
         return(
             <div>
                 <div className="bannerBox">
-                    <Scroll>
-                        <ul className="banner">
-                            {
-                                this.state.bannerList1[0].map((item,index)=>{
-                                    //console.log(typeof item.href);
-                                    return(
-                                        <a href={item.href} key={index}>
-                                            <li >
-                                                <i className={item.icon}></i>
-                                                <p>{item.title}</p>
+                    <ReactSwipe className="carousel" swipeOptions={opt}>
+                        <div className="carousel-item">
+                            <ul className='clear-fix banner'>
+                                {
+                                    this.state.bannerList1[0].map((item,index)=>{
+                                        return(
+                                            <li key={index}>
+                                                <a href={item.href}>
+                                                    <i className={item.icon}></i>
+                                                    <p>{item.title}</p>
+                                                </a>
                                             </li>
-                                        </a>
-                                    )
-                                })
-                            }
-                        </ul>
-                        <ul className="banner">
-                            {
-                                this.state.bannerList1[1].map((item,index)=>{
-                                    return(
-                                        <a href={item.href} key={index}>
-                                            <li >
-                                                <i className={item.icon}></i>
-                                                <p>{item.title}</p>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
+                        <div className="carousel-item">
+                            <ul className='clear-fix banner'>
+                                {
+                                    this.state.bannerList1[1].map((item,index)=>{
+                                        return(
+                                            <li key={index}>
+                                                <a href={item.href}>
+                                                    <i className={item.icon}></i>
+                                                    <p>{item.title}</p>
+                                                </a>
                                             </li>
-                                        </a>
-                                    )
-                                })
-                            }
-                        </ul>
-                        <ul className="banner">
-                            {
-                                this.state.bannerList1[2].map((item,index)=>{
-                                    return(
-                                        <a href={item.href} key={index}>
-                                            <li >
-                                                <i className={item.icon}></i>
-                                                <p>{item.title}</p>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
+                        <div className="carousel-item">
+                            <ul className='clear-fix banner'>
+                                {
+                                    this.state.bannerList1[2].map((item,index)=>{
+                                        return(
+                                            <li key={index}>
+                                                <a href={item.href}>
+                                                    <i className={item.icon}></i>
+                                                    <p>{item.title}</p>
+                                                </a>
                                             </li>
-                                        </a>
-                                    )
-                                })
-                            }
-                        </ul>
-                    </Scroll>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
+                    </ReactSwipe>
+
                     <ul className="dian">
                         {
                             this.state.bannerList1.map((item,index)=>{

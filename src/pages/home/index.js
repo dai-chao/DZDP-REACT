@@ -4,6 +4,7 @@ import React,{ Component } from "react"
 import Head from "../../component/header/index"
 import Download from "../../component/download/index"
 import Banner from "../../component/banner/index"
+import Preferential from "../../component/preferential";
 
 class Home extends Component{
 
@@ -15,8 +16,16 @@ class Home extends Component{
                 <Download/>
                 <div className="clear"></div>
                 <Banner/>
+                <Preferential/>
             </div>
         )
+    }
+
+    componentDidMount(){
+        let cityName = "";
+        if(cityName == null){
+            cityName = "北京"
+        }
     }
 }
 
