@@ -5,6 +5,7 @@ import Head from "../../component/header/index"
 import Download from "../../component/download/index"
 import Banner from "../../component/banner/index"
 import Preferential from "../../component/preferential";
+import Love from "../../component/love"
 
 class Home extends Component{
 
@@ -16,7 +17,10 @@ class Home extends Component{
                 <Download/>
                 <div className="clear"></div>
                 <Banner/>
+                <div className="clear"></div>
                 <Preferential/>
+                <div className="clear"></div>
+                <Love/>
             </div>
         )
     }
