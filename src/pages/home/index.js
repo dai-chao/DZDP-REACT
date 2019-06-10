@@ -8,7 +8,18 @@ import Preferential from "../../component/preferential";
 import Love from "../../component/love"
 
 class Home extends Component{
+constructor(props){
+    super(props)
+    this.state={
+        name:"猜你喜欢"
+    }
+}
 
+    onChange(event){
+        this.setState({
+            name:event.target.value
+        })
+    }
     render(){
         return(
             <div>
@@ -20,7 +31,7 @@ class Home extends Component{
                 <div className="clear"></div>
                 <Preferential/>
                 <div className="clear"></div>
-                <Love/>
+                <Love name="猜你喜欢" onChange = {this.onChange.bind(this)}>{this.state.name}</Love>    {/* 标签内容可以用 this.props.children接受收  */}
             </div>
         )
     }
